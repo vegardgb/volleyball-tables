@@ -130,15 +130,18 @@ def displayTable(table,Elite=True):
         for i in range(3,7):
             output += lineList[i]
         output += r' \kvalik ' + lineList[7] + r' \nedrykk ' + lineList[8]
-        print( output)
     else:
-        return 'ERROR: Does not yet support 1st division mode'
+        output += lineList[1] + r' \kvalik ' + lineList[2] + r' \kvalik'
+        for i in range(3,9):
+            output += lineList[i]
+        output += r' \nedrykk' + lineList[9] + r' \nedrykk ' + lineList[10]
+    print(output)
 
 def main(N,league):
     table = makeTable(league)
     sortedTable = updateMatches(table,N)
-    displayTable(sortedTable)
+    displayTable(sortedTable,False)
     
 if __name__=="__main__": 
-    main(0,H0)
-    main(0,D0)
+    main(0,H1)
+    main(0,D1)
