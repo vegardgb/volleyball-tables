@@ -9,7 +9,6 @@ Functions to reduce manual working load for updating tables online during volley
 
 ##  TODO
 
-* Cope with special case (only 9 teams) in 1st division women
 * Add TVN and how to remove them from the table
 * Fix (Æ,Ø,Å)-teams.
 * Decide on whether to have one or multiple CSV-files (one pr. league?)
