@@ -5,7 +5,7 @@ H0=["NTNUI","OSI",'Viking','Forde','Tromso','Koll','Asker','Randaberg']
 D0=['Skjetten','Oslo','Viking','Forde','Tromso','Koll','Volda','Randaberg']
 H1=["Askim","Viking 2","Forde 2","NTNUI 2","OSI 2", "Spirit Lørenskog","BTSI","Sotra","Tromso 2","Sandnes"]
 D1=["Koll 2","Viking 2","Lierne","NTNUI","OSI","BSI","OKSIL","Tromso 2","Sandnes"]
-
+league_keys = ['H0','D0','H1','D1']
 class Team(object):
     pos = 0
     name = ''
@@ -52,7 +52,6 @@ def updateMatch(table,matchID):
     teamA = teamA[5:].split("\n",1)[0]
     teamB = teamB[5:].split("\n",1)[0]
     pointsA, pointsB, homeWin = awardPoints(scoreA,scoreB)
-    print(pointsB)
     posA = findPosition(teamA,table)
     posB = findPosition(teamB,table)
     table[posA].points += pointsA
@@ -101,8 +100,16 @@ def awardPoints(scoreA,scoreB):
 
 
 # Creates table for table key
-def makeTable(league):
+def makeTable(key):
     table = []
+    if key == 'H0':
+        league = H0
+    elif key == 'H1':
+        league = H1
+    elif key == 'D0':
+        league = D0
+    elif key == 'D1':
+        league = D1
     for team in league:
         table.append(Team(team))
     for i in range(len(table)):
@@ -117,31 +124,37 @@ def sortTable(table):
 
 #input table, output latex tabular code
 # TODO: Add 1st division table
-def displayTable(table,Elite=True): 
+def displayTable(key,N): 
+    table = makeTable(key)
+    sortedTable = updateMatches(table,N)
     col = ' & '
     lineList= []
     lineList.append(r'\textbf{Nr}' + col + 'Lag' + col + 'Spelt' + col +'Vunne' + col + 'Tapt' + col + 'Settskilnad' + col + r'\textbf{Poeng} \\ \gull')
     output = lineList[0]
-    for team in table:
+    for team in sortedTable:
         lineList.append(str(team.pos+1) + col + str(team.name) + col + str(team.won+team.lost) + col + str(team.won) + col + str(team.lost) + col + 
                             str(team.setWon)+'-'+str(team.setLost) + col + r'\textbf{'+str(team.points) +r'} \\')
-    if Elite:
+    if (key == 'H0' or key == 'D0'):
         output += lineList[1] + r' \solv ' + lineList[2] + r' \bronse ' 
         for i in range(3,7):
             output += lineList[i]
         output += r' \kvalik ' + lineList[7] + r' \nedrykk ' + lineList[8]
-    else:
+    elif (key == 'H1'):
         output += lineList[1] + r' \kvalik ' + lineList[2] + r' \kvalik'
         for i in range(3,9):
             output += lineList[i]
         output += r' \nedrykk' + lineList[9] + r' \nedrykk ' + lineList[10]
+    elif (key == 'D1'):
+        output += lineList[1] + r' \kvalik ' + lineList[2] + r' \kvalik'
+        for i in range(3,8):
+            output += lineList[i]
+        output += r' \nedrykk' + lineList[8] + r' \nedrykk ' + lineList[9]
     print(output)
 
-def main(N,league):
-    table = makeTable(league)
-    sortedTable = updateMatches(table,N)
-    displayTable(sortedTable,False)
+def main():
+    for key in league_keys:
+        displayTable(key,0)
     
 if __name__=="__main__": 
-    main(0,H1)
-    main(0,D1)
+    main()
+    
