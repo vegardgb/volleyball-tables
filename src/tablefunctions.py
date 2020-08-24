@@ -1,10 +1,10 @@
 import pandas as pd
 
 #Create list of the teams for top leagues in Norway
-H0=["NTNUI","OSI",'Viking','Forde','Tromso','Koll','Asker','Randaberg']
-D0=['Skjetten','Oslo','Viking','Forde','Tromso','Koll','Volda','Randaberg']
-H1=["Askim","Viking 2","Forde 2","NTNUI 2","OSI 2", "Spirit Lørenskog","BTSI","Sotra","Tromso 2","Sandnes"]
-D1=["Koll 2","Viking 2","Lierne","NTNUI","OSI","BSI","OKSIL","Tromso 2","Sandnes"]
+H0=["NTNUI","OSI",'Viking','Førde','Tromsø','Koll','Asker','Randaberg']
+D0=['Skjetten','Oslo','Viking','Førde','Tromso','Koll','KFUM Volda','Randaberg']
+H1=["Askim","Viking 2","Førde 2","NTNUI 2","OSI 2", "Spirit Lørenskog","BTSI","Sotra","Tromsø 2","Sandnes"]
+D1=["Koll 2","Viking 2","Lierne","NTNUI","OSI","BSI","ØKSIL","Tromsø 2","Sandnes"]
 league_keys = ['H0','D0','H1','D1']
 class Team(object):
     pos = 0
@@ -35,8 +35,8 @@ class Team(object):
         
 
 #Input matchID (line in CSV). Output: teams and scores
-def readMatch(matchID):
-    match: pd.DataFrame = pd.read_csv("matchlist.csv",skiprows=lambda x: (x != 0) and (x not in range(matchID+1,matchID+2)))
+def readMatch(matchID,key):
+    match: pd.DataFrame = pd.read_csv("../data/matchlist"+key+".csv",skiprows=lambda x: (x != 0) and (x not in range(matchID+1,matchID+2)),encoding ='utf-8')
     print(match)
     return str(match.teamA), str(match.teamB), int(match.scoreA), int(match.scoreB)
 
@@ -47,8 +47,8 @@ def findPosition(team,table):
             return i
     print('ERROR: Unable to find position of team ' + str(team))
 
-def updateMatch(table,matchID):
-    teamA, teamB, scoreA, scoreB = readMatch(matchID)
+def updateMatch(table,matchID,key):
+    teamA, teamB, scoreA, scoreB = readMatch(matchID,key)
     teamA = teamA[5:].split("\n",1)[0]
     teamB = teamB[5:].split("\n",1)[0]
     pointsA, pointsB, homeWin = awardPoints(scoreA,scoreB)
@@ -72,9 +72,9 @@ def updateMatch(table,matchID):
     return table
 
 #Update N matches at once calling updateMatch()
-def updateMatches(table,N):
+def updateMatches(table,N,key):
     for i in range(N):
-        table = updateMatch(table,i)
+        table = updateMatch(table,i,key)
     return sortTable(table)
 
 # input set scores 
@@ -104,10 +104,10 @@ def makeTable(key):
     table = []
     if key == 'H0':
         league = H0
-    elif key == 'H1':
-        league = H1
     elif key == 'D0':
         league = D0
+    elif key == 'H1':
+        league = H1
     elif key == 'D1':
         league = D1
     for team in league:
@@ -123,10 +123,9 @@ def sortTable(table):
     return wrongRankTable
 
 #input table, output latex tabular code
-# TODO: Add 1st division table
 def displayTable(key,N): 
     table = makeTable(key)
-    sortedTable = updateMatches(table,N)
+    sortedTable = updateMatches(table,N,key)
     col = ' & '
     lineList= []
     lineList.append(r'\textbf{Nr}' + col + 'Lag' + col + 'Spelt' + col +'Vunne' + col + 'Tapt' + col + 'Settskilnad' + col + r'\textbf{Poeng} \\ \gull')
@@ -153,7 +152,7 @@ def displayTable(key,N):
 
 def main():
     for key in league_keys:
-        displayTable(key,0)
+        displayTable(key,1)
     
 if __name__=="__main__": 
     main()
