@@ -8,5 +8,3 @@ Functions to reduce manual working load for updating tables online during volley
 3. Export output to Overleaf
 
 ##  TODO
-
-* Add TVN and how to remove them from the table
