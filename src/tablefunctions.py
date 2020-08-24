@@ -1,10 +1,10 @@
 import pandas as pd
 
 #Create list of the teams for top leagues in Norway
-H0=["NTNUI","OSI",'Viking','Førde','Tromsø','Koll','Asker','Randaberg']
-D0=['Skjetten','Oslo','Viking','Førde','Tromso','Koll','KFUM Volda','Randaberg']
-H1=["Askim","Viking 2","Førde 2","NTNUI 2","OSI 2", "Spirit Lørenskog","BTSI","Sotra","Tromsø 2","Sandnes"]
-D1=["Koll 2","Viking 2","Lierne","NTNUI","OSI","BSI","ØKSIL","Tromsø 2","Sandnes"]
+H0=["Asker","Førde","Koll","NTNUI","OSI","Randaberg","Tromsø",'Viking']
+D0=['Førde','KFUM Volda','Koll','Oslo Volley','Randaberg','Skjetten','Tromsø','Viking']
+H1=["Askim","BTSI","Førde 2","NTNUI 2","OSI 2","Sandnes","Sotra","Spirit Lørenskog","Tromsø 2","Viking 2"]
+D1=["BSI","Koll 2","Lierne","NTNUI","OSI","Sandnes","Tromsø 2","Viking 2","ØKSIL"]
 league_keys = ['H0','D0','H1','D1']
 class Team(object):
     pos = 0
@@ -155,7 +155,7 @@ def displayTable(key,N):
 
 def main():
     for key in league_keys:
-        displayTable(key,6)
+        displayTable(key,0)
     
 if __name__=="__main__": 
     main()
