@@ -52,20 +52,23 @@ def updateMatch(table,matchID,key):
     teamA = teamA[5:].split("\n",1)[0]
     teamB = teamB[5:].split("\n",1)[0]
     pointsA, pointsB, homeWin = awardPoints(scoreA,scoreB)
-    posA = findPosition(teamA,table)
+    if (teamA != 'TVN'): #TVN shall be removed from the table
+        posA = findPosition(teamA,table)
+        table[posA].points += pointsA
+        table[posA].played += 1
+        table[posA].setWon += scoreA
+        table[posA].setLost += scoreB
+        if homeWin:
+            table[posA].won += 1
+        else:
+            table[posA].lost += 1
     posB = findPosition(teamB,table)
-    table[posA].points += pointsA
     table[posB].points += pointsB
-    table[posA].played += 1
     table[posB].played += 1
     if homeWin:
-        table[posA].won += 1
         table[posB].lost += 1
     else:
-        table[posA].lost += 1
         table[posB].won += 1
-    table[posA].setWon += scoreA
-    table[posA].setLost += scoreB
     table[posB].setWon += scoreB
     table[posB].setLost += scoreA
     print('Match data for ' + teamA + ' vs ' + teamB + ' successfully updated to table')
@@ -152,7 +155,7 @@ def displayTable(key,N):
 
 def main():
     for key in league_keys:
-        displayTable(key,1)
+        displayTable(key,6)
     
 if __name__=="__main__": 
     main()
