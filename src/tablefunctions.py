@@ -4,7 +4,7 @@ import pandas as pd
 H0=["Asker","Førde","Koll","NTNUI","OSI","Randaberg","Tromsø",'Viking']
 D0=['Førde','KFUM Volda','Koll','Oslo Volley','Randaberg','Skjetten','Tromsø','Viking']
 H1=["Askim","BTSI","Førde 2","NTNUI 2","OSI 2","Sandnes","Sotra","Spirit Lørenskog","Tromsø 2","Viking 2"]
-D1=["BSI","Koll 2","Lierne","NTNUI","OSI","Sandnes","Tromsø 2","Viking 2","ØKSIL"]
+D1=["BSI","Koll 2","Lierne","NTNUI","OSI","Sandnes","Tromsø 2","Viking 2"]
 league_keys = ['H0','D0','H1','D1']
 class Team(object):
     pos = 0
@@ -150,7 +150,7 @@ def displayTable(key,N):
         output += lineList[1] + r' \kvalik ' + lineList[2] + r' \kvalik'
         for i in range(3,8):
             output += lineList[i]
-        output += r' \nedrykk' + lineList[8] + r' \nedrykk ' + lineList[9]
+        output += r' \nedrykk' + lineList[8]
     print(output)
 
 def main():
