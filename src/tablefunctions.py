@@ -1,11 +1,15 @@
 import pandas as pd
 
+matchesPlayed=[0,0,0,0] # Decides how many lines to read, should be replaced by automated one
+
 #Create list of the teams for top leagues in Norway
 H0=["Asker","Førde","Koll","NTNUI","OSI","Randaberg","Tromsø",'Viking']
 D0=['Førde','KFUM Volda','Koll','Oslo Volley','Randaberg','Skjetten','Tromsø','Viking']
 H1=["Askim","BTSI","Førde 2","NTNUI 2","OSI 2","Sandnes","Sotra","Spirit Lørenskog","Tromsø 2","Viking 2"]
 D1=["BSI","Koll 2","Lierne","NTNUI","OSI","Sandnes","Tromsø 2","Viking 2"]
 league_keys = ['H0','D0','H1','D1']
+
+# Creates team object which can be sorted according to table criteria
 class Team(object):
     pos = 0
     name = ''
@@ -154,8 +158,8 @@ def displayTable(key,N):
     print(output)
 
 def main():
-    for key in league_keys:
-        displayTable(key,0)
+    for i in range (league_keys):
+        displayTable(league_keys[i],matches_played[i])
     
 if __name__=="__main__": 
     main()
