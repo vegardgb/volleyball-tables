@@ -1,6 +1,6 @@
 import pandas as pd
 
-matchesPlayed=[0,0,0,0] # Decides how many lines to read, should be replaced by automated one
+matches_played=[0,0,1,0] # Decides how many lines to read, should be replaced by automated one
 
 #Create list of the teams for top leagues in Norway
 H0=["Asker","Førde","Koll","NTNUI","OSI","Randaberg","Tromsø",'Viking']
@@ -158,7 +158,7 @@ def displayTable(key,N):
     print(output)
 
 def main():
-    for i in range (league_keys):
+    for i in range (4):
         displayTable(league_keys[i],matches_played[i])
     
 if __name__=="__main__": 
