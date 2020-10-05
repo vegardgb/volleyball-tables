@@ -1,6 +1,5 @@
 import pandas as pd
-
-matches_played=[0,0,1,0] # Decides how many lines to read, should be replaced by automated one
+import numpy as np
 
 #Create list of the teams for top leagues in Norway
 H0=["Asker","Førde","Koll","NTNUI","OSI","Randaberg","Tromsø",'Viking']
@@ -41,7 +40,9 @@ class Team(object):
 #Input matchID (line in CSV). Output: teams and scores
 def readMatch(matchID,key):
     match: pd.DataFrame = pd.read_csv("../data/matchlist"+key+".csv",skiprows=lambda x: (x != 0) and (x not in range(matchID+1,matchID+2)),encoding ='utf-8')
-    print(match)
+    if (type(match.scoreA[0])!=np.int64):
+        #print('This match have not been played!')
+        return str(match.teamA), str(match.teamB), False, False
     return str(match.teamA), str(match.teamB), int(match.scoreA), int(match.scoreB)
 
 # Input team name and table, returns position of team in table    
@@ -53,6 +54,8 @@ def findPosition(team,table):
 
 def updateMatch(table,matchID,key):
     teamA, teamB, scoreA, scoreB = readMatch(matchID,key)
+    if (type(scoreA)==bool):
+        return table, False
     teamA = teamA[5:].split("\n",1)[0]
     teamB = teamB[5:].split("\n",1)[0]
     pointsA, pointsB, homeWin = awardPoints(scoreA,scoreB)
@@ -76,12 +79,14 @@ def updateMatch(table,matchID,key):
     table[posB].setWon += scoreB
     table[posB].setLost += scoreA
     print('Match data for ' + teamA + ' vs ' + teamB + ' successfully updated to table')
-    return table
+    return table, True
 
 #Update N matches at once calling updateMatch()
 def updateMatches(table,N,key):
     for i in range(N):
-        table = updateMatch(table,i,key)
+        table,value = updateMatch(table,i,key)
+        if (value == False):
+            break
     return sortTable(table)
 
 # input set scores 
@@ -158,8 +163,9 @@ def displayTable(key,N):
     print(output)
 
 def main():
+    total_matches=[64,64,100,64]
     for i in range (4):
-        displayTable(league_keys[i],matches_played[i])
+        displayTable(league_keys[i],total_matches[i])
     
 if __name__=="__main__": 
     main()
