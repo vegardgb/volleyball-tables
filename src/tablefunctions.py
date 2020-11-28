@@ -21,12 +21,16 @@ class Team(object):
     def __init__(self, name):
         self.name = str(name)
     def __eq__(self, other):
-        return self.points == other.points and (self.setWon - self.setLost == other.setWon - other.setLost)
+        return self.points == other.points and self.won == other.won and (self.setWon - self.setLost == other.setWon - other.setLost)
 
     def __lt__(self, other):
         if self.points > other.points:
             return True
         if self.points < other.points:
+            return False
+        if self.won > other.won:
+            return True
+        if self.won < other.won:
             return False
         if ((self.setWon - self.setLost) > (other.setWon - other.setLost)):
            return True
@@ -78,7 +82,7 @@ def updateMatch(table,matchID,key):
         table[posB].won += 1
     table[posB].setWon += scoreB
     table[posB].setLost += scoreA
-    print('Match data for ' + teamA + ' vs ' + teamB + ' successfully updated to table')
+    #print('Match data for ' + teamA + ' vs ' + teamB + ' successfully updated to table')
     return table, True
 
 #Update N matches at once calling updateMatch()

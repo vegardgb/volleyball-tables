@@ -1,35 +1,33 @@
 teamA,teamB,scoreA,scoreB
 OSI 2,Førde 2,1,3
-NTNUI 2,BTSI
-Askim,Førde 2
-OSI 2,Sotra
-Spirit Lørenskog,Førde 2
-Tromsø 2,Viking 2
-NTNUI 2,Sotra
-Askim,Viking 2
-OSI 2,Askim
-Spirit Lørenskog,Viking 2
-OSI 2,Viking 2
-Sandnes,NTNUI 2
-BTSI,Tromsø 2
-TVN,NTNUI 2
-Viking 2,Tromsø 2
-TVN,Sandnes
-Sotra,NTNUI 2
-BTSI,NTNUI 2
-Førde 2,Askim
-Viking 2,NTNUI 2
-Askim,Spirit Lørenskog
-BTSI,OSI 2
-Sandnes,Førde 2
-TVN,Førde 2
-Viking 2,OSI 2
-Tromsø 2,Askim
-Sandnes,Viking 2
-NTNUI 2,Førde 2
-Førde 2,NTNUI 2
-Tromsø 2,OSI 2
-TVN,Viking 2
+NTNUI 2,BTSI,3,0
+Askim,Førde 2,3,1
+OSI 2,Sotra,3,2
+Spirit Lørenskog,Førde 2,0,3
+Tromsø 2,Viking 2,1,3
+NTNUI 2,Sotra,3,0
+Askim,Viking 2,3,1
+OSI 2,Askim,1,3
+Spirit Lørenskog,Viking 2,2,3
+OSI 2,Viking 2,0,3
+Sandnes,NTNUI 2,1,3
+BTSI,Tromsø 2,2,3
+TVN,NTNUI 2,3,2
+Viking 2,Tromsø 2,3,0
+TVN,Sandnes,1,3
+Sotra,NTNUI 2,1,3
+BTSI,NTNUI 2,1,3
+Førde 2,Askim,3,2
+Viking 2,NTNUI 2,3,1
+Askim,Spirit Lørenskog,3,1
+Sandnes,Førde 2,0,3
+TVN,Førde 2,1,3
+Viking 2,OSI 2,3,0
+Tromsø 2,Askim,1,3
+Sandnes,Viking 2,0,3
+NTNUI 2,Førde 2,1,3
+Førde 2,NTNUI 2,3,1
+Tromsø 2,OSI 2,3,0
 Førde 2,Tromsø 2
 Viking 2,Sotra
 Sotra,Tromsø 2
@@ -99,3 +97,5 @@ Spirit Lørenskog,OSI 2
 Spirit Lørenskog,NTNUI 2
 Askim,Sandnes
 Sotra,Viking 2
+BTSI,OSI 2
+TVN,Viking 2

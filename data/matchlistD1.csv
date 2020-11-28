@@ -1,26 +1,24 @@
 teamA,teamB,scoreA,scoreB
-OSI,BSI
-Lierne,Sandnes
-Koll 2,BSI
-NTNUI,Sandnes
-Tromsø 2,Viking 2
-OSI,Lierne
-Koll 2,Lierne
-Tromsø 2,BSI
-BSI,Tromsø 2
-Sandnes,NTNUI
-TVN,NTNUI
-Viking 2,Tromsø 2
-Koll 2,OSI
-BSI,NTNUI
-Viking 2,NTNUI
-Koll 2,Sandnes
-OSI,Sandnes
-Sandnes,Viking 2
-Lierne,Koll 2
-TVN,Viking 2
-Tromsø 2,OSI
-NTNUI,Koll 2
+OSI,BSI,3,0
+Lierne,Sandnes,3,1
+Koll 2,BSI,3,0
+NTNUI,Sandnes,3,0
+Tromsø 2,Viking 2,3,2
+OSI,Lierne,3,0
+Koll 2,Lierne,3,2
+Tromsø 2,BSI,0,3
+BSI,Tromsø 2,3,0
+Sandnes,NTNUI,3,2
+TVN,NTNUI,1,3
+Viking 2,Tromsø 2,3,2
+Koll 2,OSI,2,3
+BSI,NTNUI,0,3
+Viking 2,NTNUI,1,3
+OSI,Sandnes,3,1
+Sandnes,Viking 2,3,0
+Lierne,Koll 2,3,2
+Tromsø 2,OSI,3,0
+NTNUI,Koll 2,3,0
 NTNUI,OSI
 Viking 2,Sandnes
 BSI,Sandnes
@@ -63,3 +61,5 @@ Koll 2,Tromsø 2
 Lierne,BSI
 OSI,Tromsø 2
 NTNUI,BSI
+Koll 2,Sandnes
+TVN,Viking 2

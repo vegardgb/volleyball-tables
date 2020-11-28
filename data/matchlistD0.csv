@@ -1,32 +1,30 @@
 teamA,teamB,scoreA,scoreB
-Randaberg,Førde
-Tromsø,Viking
-Oslo Volley,KFUM Volda
-TVN,Førde
-Skjetten,Oslo Volley
-Koll,KFUM Volda
-KFUM Volda,Viking
-Førde,Viking
-Viking,Skjetten
-Tromsø,KFUM Volda
-Randaberg,Oslo Volley
-Førde,Skjetten
-TVN,Oslo Volley
-Koll,Tromsø
-KFUM Volda,Randaberg
-Oslo Volley,Tromsø
-Førde,Randaberg
-Randaberg,Viking
-Oslo Volley,Førde
-Tromsø,Skjetten
-Koll,Førde
-TVN,Viking
-KFUM Volda,Skjetten
-Randaberg,Koll
-TVN,Koll
-KFUM Volda,Oslo Volley
-Randaberg,Skjetten
-Førde,Tromsø
+Randaberg,Førde,3,0
+Tromsø,Viking,3,1
+Oslo Volley,KFUM Volda,3,1
+TVN,Førde,1,3
+Skjetten,Oslo Volley,0,3
+Koll,KFUM Volda,3,0
+KFUM Volda,Viking,3,2
+Førde,Viking,1,3
+Viking,Skjetten,3,0
+Tromsø,KFUM Volda,3,0
+Randaberg,Oslo Volley,3,1
+Førde,Skjetten,3,1
+TVN,Oslo Volley,3,2
+Koll,Tromsø,3,1
+KFUM Volda,Randaberg,0,3
+Oslo Volley,Tromsø,0,3
+Førde,Randaberg,3,1
+Randaberg,Viking,3,1
+Oslo Volley,Førde,3,2
+Tromsø,Skjetten,3,0
+Koll,Førde,3,2
+KFUM Volda,Skjetten,3,0
+Randaberg,Koll,1,3
+KFUM Volda,Oslo Volley,3,1
+Randaberg,Skjetten,3,0
+Førde,Tromsø,0,3
 Viking,Tromsø
 TVN,Skjetten
 TVN,Randaberg
@@ -63,3 +61,5 @@ Førde,KFUM Volda
 KFUM Volda,Tromsø
 Viking,Randaberg
 Skjetten,Koll
+TVN,Viking
+TVN,Koll
