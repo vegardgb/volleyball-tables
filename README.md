@@ -10,4 +10,6 @@ Functions to reduce manual working load for updating tables online during volley
 
 ##  TODO
 
-* Automate determination of number of matches played
+* Improve output to Overleaf -  should be possible to do in one copy operation.
+* Implement new feature with auto-generated matches (January 22nd)
+* Make it possible to skip matches in the CSV-file.
