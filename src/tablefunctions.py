@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 
+pd.options.mode.chained_assignment = None  # default='warn' # Avoid warnings for dataframe handling
+
 #Create list of the teams for top leagues in Norway
 H0=["Asker","Førde","Koll","NTNUI","OSI","Randaberg","Tromsø",'Viking']
 D0=['Førde','KFUM Volda','Koll','Oslo Volley','Randaberg','Skjetten','Tromsø','Viking']
@@ -48,6 +50,33 @@ def readMatch(matchID,key):
         #print('This match have not been played!')
         return str(match.teamA), str(match.teamB), False, False
     return str(match.teamA), str(match.teamB), int(match.scoreA), int(match.scoreB)
+
+#Main function to generate all matches for a league
+def generate_matches(league,N,line=0):
+    df = pd.DataFrame(np.zeros((N**2,4)),columns=['Home Team','Away Team','Home Score','Away Score'])
+    for i in range(N):
+        current_team = league[i]
+        for j in range(i):
+            df,line = generate_double_match_and_go_to_next_line(df,current_team,league[j],line)
+        df, line = generate_tvn_match(df,current_team,line)
+    df.to_csv('../data/automated_matchlist.csv')
+
+#help function for generating both matches between two teams
+def generate_double_match_and_go_to_next_line(df,home,away,line):
+    df['Home Team'][line]= home
+    df['Away Team'][line]= away
+    line+=1
+    df['Home Team'][line]= away
+    df['Away Team'][line] = home
+    line += 1
+    return df, line
+
+#generates match vs tvn for relevant team
+def generate_tvn_match(df,team,line):
+    df['Home Team'][line] = 'TVN'
+    df['Away Team'][line] = team
+    line +=1
+    return df, line
 
 # Input team name and table, returns position of team in table    
 def findPosition(team,table):
@@ -170,7 +199,7 @@ def main():
     total_matches=[64,64,100,64]
     for i in range (4):
         displayTable(league_keys[i],total_matches[i])
-    
+
 if __name__=="__main__": 
     main()
-    
+
