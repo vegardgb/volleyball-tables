@@ -1,65 +1,82 @@
-teamA,teamB,scoreA,scoreB
-Randaberg,Førde,3,0
-Tromsø,Viking,3,1
-Oslo Volley,KFUM Volda,3,1
-TVN,Førde,1,3
-Skjetten,Oslo Volley,0,3
-Koll,KFUM Volda,3,0
-KFUM Volda,Viking,3,2
-Førde,Viking,1,3
-Viking,Skjetten,3,0
-Tromsø,KFUM Volda,3,0
-Randaberg,Oslo Volley,3,1
-Førde,Skjetten,3,1
-TVN,Oslo Volley,3,2
-Koll,Tromsø,3,1
-KFUM Volda,Randaberg,0,3
-Oslo Volley,Tromsø,0,3
-Førde,Randaberg,3,1
-Randaberg,Viking,3,1
-Oslo Volley,Førde,3,2
-Tromsø,Skjetten,3,0
-Koll,Førde,3,2
-KFUM Volda,Skjetten,3,0
-Randaberg,Koll,1,3
-KFUM Volda,Oslo Volley,3,1
-Randaberg,Skjetten,3,0
-Førde,Tromsø,0,3
-Viking,Tromsø
-TVN,Skjetten
-TVN,Randaberg
-Skjetten,KFUM Volda
-Viking,Førde
-Tromsø,Oslo Volley
-Oslo Volley,Koll
-Skjetten,Randaberg
-Oslo Volley,Viking
-KFUM Volda,Førde
-Koll,Viking
-Tromsø,Randaberg
-Viking,Koll
-Førde,Oslo Volley
-Randaberg,KFUM Volda
-Viking,Oslo Volley
-TVN,KFUM Volda
-Tromsø,Koll
-Tromsø,Førde
-Viking,KFUM Volda
-Koll,Randaberg
-Skjetten,Førde
-Oslo Volley,Randaberg
-TVN,Tromsø
-Skjetten,Viking
-KFUM Volda,Koll
-Randaberg,Tromsø
-Oslo Volley,Skjetten
-Førde,Koll
-Koll,Skjetten
-Koll,Oslo Volley
-Skjetten,Tromsø
-Førde,KFUM Volda
-KFUM Volda,Tromsø
-Viking,Randaberg
-Skjetten,Koll
-TVN,Viking
-TVN,Koll
+,teamA,teamB,scoreA,scoreB
+0,TVN,Førde,0.0,0.0
+1,KFUM Volda,Førde,0.0,0.0
+2,Førde,KFUM Volda,0.0,0.0
+3,TVN,KFUM Volda,0.0,0.0
+4,Koll,Førde,0.0,0.0
+5,Førde,Koll,0.0,0.0
+6,Koll,KFUM Volda,0.0,0.0
+7,KFUM Volda,Koll,0.0,0.0
+8,TVN,Koll,0.0,0.0
+9,NTNUI,Førde,0.0,0.0
+10,Førde,NTNUI,0.0,0.0
+11,NTNUI,KFUM Volda,0.0,0.0
+12,KFUM Volda,NTNUI,0.0,0.0
+13,NTNUI,Koll,0.0,0.0
+14,Koll,NTNUI,0.0,0.0
+15,TVN,NTNUI,0.0,0.0
+16,Oslo Volley,Førde,0.0,0.0
+17,Førde,Oslo Volley,0.0,0.0
+18,Oslo Volley,KFUM Volda,0.0,0.0
+19,KFUM Volda,Oslo Volley,0.0,0.0
+20,Oslo Volley,Koll,0.0,0.0
+21,Koll,Oslo Volley,0.0,0.0
+22,Oslo Volley,NTNUI,0.0,0.0
+23,NTNUI,Oslo Volley,0.0,0.0
+24,TVN,Oslo Volley,0.0,0.0
+25,Randaberg,Førde,0.0,0.0
+26,Førde,Randaberg,0.0,0.0
+27,Randaberg,KFUM Volda,0.0,0.0
+28,KFUM Volda,Randaberg,0.0,0.0
+29,Randaberg,Koll,0.0,0.0
+30,Koll,Randaberg,0.0,0.0
+31,Randaberg,NTNUI,0.0,0.0
+32,NTNUI,Randaberg,0.0,0.0
+33,Randaberg,Oslo Volley,0.0,0.0
+34,Oslo Volley,Randaberg,0.0,0.0
+35,TVN,Randaberg,0.0,0.0
+36,Skjetten,Førde,0.0,0.0
+37,Førde,Skjetten,0.0,0.0
+38,Skjetten,KFUM Volda,0.0,0.0
+39,KFUM Volda,Skjetten,0.0,0.0
+40,Skjetten,Koll,0.0,0.0
+41,Koll,Skjetten,0.0,0.0
+42,Skjetten,NTNUI,0.0,0.0
+43,NTNUI,Skjetten,0.0,0.0
+44,Skjetten,Oslo Volley,0.0,0.0
+45,Oslo Volley,Skjetten,0.0,0.0
+46,Skjetten,Randaberg,0.0,0.0
+47,Randaberg,Skjetten,0.0,0.0
+48,TVN,Skjetten,0.0,0.0
+49,Tromsø,Førde,0.0,0.0
+50,Førde,Tromsø,0.0,0.0
+51,Tromsø,KFUM Volda,0.0,0.0
+52,KFUM Volda,Tromsø,0.0,0.0
+53,Tromsø,Koll,0.0,0.0
+54,Koll,Tromsø,0.0,0.0
+55,Tromsø,NTNUI,0.0,0.0
+56,NTNUI,Tromsø,0.0,0.0
+57,Tromsø,Oslo Volley,0.0,0.0
+58,Oslo Volley,Tromsø,0.0,0.0
+59,Tromsø,Randaberg,0.0,0.0
+60,Randaberg,Tromsø,0.0,0.0
+61,Tromsø,Skjetten,0.0,0.0
+62,Skjetten,Tromsø,0.0,0.0
+63,TVN,Tromsø,0.0,0.0
+64,Viking,Førde,0.0,0.0
+65,Førde,Viking,0.0,0.0
+66,Viking,KFUM Volda,0.0,0.0
+67,KFUM Volda,Viking,0.0,0.0
+68,Viking,Koll,0.0,0.0
+69,Koll,Viking,0.0,0.0
+70,Viking,NTNUI,0.0,0.0
+71,NTNUI,Viking,0.0,0.0
+72,Viking,Oslo Volley,0.0,0.0
+73,Oslo Volley,Viking,0.0,0.0
+74,Viking,Randaberg,0.0,0.0
+75,Randaberg,Viking,0.0,0.0
+76,Viking,Skjetten,0.0,0.0
+77,Skjetten,Viking,0.0,0.0
+78,Viking,Tromsø,0.0,0.0
+79,Tromsø,Viking,0.0,0.0
+80,TVN,Viking,0.0,0.0

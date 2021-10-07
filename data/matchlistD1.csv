@@ -1,65 +1,82 @@
-teamA,teamB,scoreA,scoreB
-OSI,BSI,3,0
-Lierne,Sandnes,3,1
-Koll 2,BSI,3,0
-NTNUI,Sandnes,3,0
-Tromsø 2,Viking 2,3,2
-OSI,Lierne,3,0
-Koll 2,Lierne,3,2
-Tromsø 2,BSI,0,3
-BSI,Tromsø 2,3,0
-Sandnes,NTNUI,3,2
-TVN,NTNUI,1,3
-Viking 2,Tromsø 2,3,2
-Koll 2,OSI,2,3
-BSI,NTNUI,0,3
-Viking 2,NTNUI,1,3
-OSI,Sandnes,3,1
-Sandnes,Viking 2,3,0
-Lierne,Koll 2,3,2
-Tromsø 2,OSI,3,0
-NTNUI,Koll 2,3,0
-NTNUI,OSI
-Viking 2,Sandnes
-BSI,Sandnes
-Lierne,OSI
-Sandnes,Koll 2
-BSI,OSI
-Viking 2,OSI
-TVN,Koll 2
-OSI,Koll 2
-Lierne,Viking 2
-NTNUI,Viking 2
-TVN,Sandnes
-Lierne,Tromsø 2
-NTNUI,Tromsø 2
-Koll 2,Viking 2
-OSI,Viking 2
-NTNUI,Lierne
-Tromsø 2,Sandnes
-BSI,Viking 2
-TVN,Lierne
-BSI,Koll 2
-Viking 2,Koll 2
-Sandnes,Lierne
-Tromsø 2,NTNUI
-Viking 2,Lierne
-Sandnes,OSI
-TVN,OSI
-BSI,Lierne
-Tromsø 2,Koll 2
-Koll 2,NTNUI
-Sandnes,BSI
-Tromsø 2,Lierne
-OSI,NTNUI
-TVN,BSI
-Lierne,NTNUI
-Viking 2,BSI
-TVN,Tromsø 2
-Sandnes,Tromsø 2
-Koll 2,Tromsø 2
-Lierne,BSI
-OSI,Tromsø 2
-NTNUI,BSI
-Koll 2,Sandnes
-TVN,Viking 2
+,teamA,teamB,scoreA,scoreB
+0,TVN,BSI,0.0,0.0
+1,Koll 2,BSI,0.0,0.0
+2,BSI,Koll 2,0.0,0.0
+3,TVN,Koll 2,0.0,0.0
+4,Lierne,BSI,0.0,0.0
+5,BSI,Lierne,0.0,0.0
+6,Lierne,Koll 2,0.0,0.0
+7,Koll 2,Lierne,0.0,0.0
+8,TVN,Lierne,0.0,0.0
+9,NTNUI 2,BSI,0.0,0.0
+10,BSI,NTNUI 2,0.0,0.0
+11,NTNUI 2,Koll 2,0.0,0.0
+12,Koll 2,NTNUI 2,0.0,0.0
+13,NTNUI 2,Lierne,0.0,0.0
+14,Lierne,NTNUI 2,0.0,0.0
+15,TVN,NTNUI 2,0.0,0.0
+16,OSI,BSI,0.0,0.0
+17,BSI,OSI,0.0,0.0
+18,OSI,Koll 2,0.0,0.0
+19,Koll 2,OSI,0.0,0.0
+20,OSI,Lierne,0.0,0.0
+21,Lierne,OSI,0.0,0.0
+22,OSI,NTNUI 2,0.0,0.0
+23,NTNUI 2,OSI,0.0,0.0
+24,TVN,OSI,0.0,0.0
+25,Randaberg 2,BSI,0.0,0.0
+26,BSI,Randaberg 2,0.0,0.0
+27,Randaberg 2,Koll 2,0.0,0.0
+28,Koll 2,Randaberg 2,0.0,0.0
+29,Randaberg 2,Lierne,0.0,0.0
+30,Lierne,Randaberg 2,0.0,0.0
+31,Randaberg 2,NTNUI 2,0.0,0.0
+32,NTNUI 2,Randaberg 2,0.0,0.0
+33,Randaberg 2,OSI,0.0,0.0
+34,OSI,Randaberg 2,0.0,0.0
+35,TVN,Randaberg 2,0.0,0.0
+36,Sandnes,BSI,0.0,0.0
+37,BSI,Sandnes,0.0,0.0
+38,Sandnes,Koll 2,0.0,0.0
+39,Koll 2,Sandnes,0.0,0.0
+40,Sandnes,Lierne,0.0,0.0
+41,Lierne,Sandnes,0.0,0.0
+42,Sandnes,NTNUI 2,0.0,0.0
+43,NTNUI 2,Sandnes,0.0,0.0
+44,Sandnes,OSI,0.0,0.0
+45,OSI,Sandnes,0.0,0.0
+46,Sandnes,Randaberg 2,0.0,0.0
+47,Randaberg 2,Sandnes,0.0,0.0
+48,TVN,Sandnes,0.0,0.0
+49,Tromsø 2,BSI,0.0,0.0
+50,BSI,Tromsø 2,0.0,0.0
+51,Tromsø 2,Koll 2,0.0,0.0
+52,Koll 2,Tromsø 2,0.0,0.0
+53,Tromsø 2,Lierne,0.0,0.0
+54,Lierne,Tromsø 2,0.0,0.0
+55,Tromsø 2,NTNUI 2,0.0,0.0
+56,NTNUI 2,Tromsø 2,0.0,0.0
+57,Tromsø 2,OSI,0.0,0.0
+58,OSI,Tromsø 2,0.0,0.0
+59,Tromsø 2,Randaberg 2,0.0,0.0
+60,Randaberg 2,Tromsø 2,0.0,0.0
+61,Tromsø 2,Sandnes,0.0,0.0
+62,Sandnes,Tromsø 2,0.0,0.0
+63,TVN,Tromsø 2,0.0,0.0
+64,Viking 2,BSI,0.0,0.0
+65,BSI,Viking 2,0.0,0.0
+66,Viking 2,Koll 2,0.0,0.0
+67,Koll 2,Viking 2,0.0,0.0
+68,Viking 2,Lierne,0.0,0.0
+69,Lierne,Viking 2,0.0,0.0
+70,Viking 2,NTNUI 2,0.0,0.0
+71,NTNUI 2,Viking 2,0.0,0.0
+72,Viking 2,OSI,0.0,0.0
+73,OSI,Viking 2,0.0,0.0
+74,Viking 2,Randaberg 2,0.0,0.0
+75,Randaberg 2,Viking 2,0.0,0.0
+76,Viking 2,Sandnes,0.0,0.0
+77,Sandnes,Viking 2,0.0,0.0
+78,Viking 2,Tromsø 2,0.0,0.0
+79,Tromsø 2,Viking 2,0.0,0.0
+80,TVN,Viking 2,0.0,0.0

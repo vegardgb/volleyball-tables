@@ -5,9 +5,9 @@ pd.options.mode.chained_assignment = None  # default='warn' # Avoid warnings for
 
 #Create list of the teams for top leagues in Norway
 H0=["Asker","Førde","Koll","NTNUI","OSI","Randaberg","Tromsø",'Viking']
-D0=['Førde','KFUM Volda','Koll','Oslo Volley','Randaberg','Skjetten','Tromsø','Viking']
-H1=["Askim","BTSI","Førde 2","NTNUI 2","OSI 2","Sandnes","Sotra","Spirit Lørenskog","Tromsø 2","Viking 2"]
-D1=["BSI","Koll 2","Lierne","NTNUI","OSI","Sandnes","Tromsø 2","Viking 2"]
+D0=['Førde','KFUM Volda','Koll','NTNUI','Oslo Volley','Randaberg','Skjetten','Tromsø','Viking']
+H1=["Askim","BTSI","Førde 2","NTNUI 2","OSI 2","Sandnes","Sotra","Spirit Lørenskog","Torvastad","Tromsø 2","Viking 2"]
+D1=["BSI","Koll 2","Lierne","NTNUI 2","OSI","Randaberg 2","Sandnes","Tromsø 2","Viking 2"]
 league_keys = ['H0','D0','H1','D1']
 
 # Creates team object which can be sorted according to table criteria
@@ -52,29 +52,29 @@ def readMatch(matchID,key):
     return str(match.teamA), str(match.teamB), int(match.scoreA), int(match.scoreB)
 
 #Main function to generate all matches for a league
-def generate_matches(league,N,line=0):
-    df = pd.DataFrame(np.zeros((N**2,4)),columns=['Home Team','Away Team','Home Score','Away Score'])
+def generate_matches(league,N,line=0,outpath='../data/automated_matchlist.csv'):
+    df = pd.DataFrame(np.zeros((N**2,4)),columns=['teamA','teamB','scoreA','scoreB'])
     for i in range(N):
         current_team = league[i]
         for j in range(i):
             df,line = generate_double_match_and_go_to_next_line(df,current_team,league[j],line)
         df, line = generate_tvn_match(df,current_team,line)
-    df.to_csv('../data/automated_matchlist.csv')
+    df.to_csv(outpath)
 
 #help function for generating both matches between two teams
 def generate_double_match_and_go_to_next_line(df,home,away,line):
-    df['Home Team'][line]= home
-    df['Away Team'][line]= away
+    df['teamA'][line]= home
+    df['teamB'][line]= away
     line+=1
-    df['Home Team'][line]= away
-    df['Away Team'][line] = home
+    df['teamA'][line]= away
+    df['teamB'][line] = home
     line += 1
     return df, line
 
 #generates match vs tvn for relevant team
 def generate_tvn_match(df,team,line):
-    df['Home Team'][line] = 'TVN'
-    df['Away Team'][line] = team
+    df['teamA'][line] = 'TVN'
+    df['teamB'][line] = team
     line +=1
     return df, line
 
@@ -118,8 +118,6 @@ def updateMatch(table,matchID,key):
 def updateMatches(table,N,key):
     for i in range(N):
         table,value = updateMatch(table,i,key)
-        if (value == False):
-            break
     return sortTable(table)
 
 # input set scores 
@@ -178,28 +176,36 @@ def displayTable(key,N):
     for team in sortedTable:
         lineList.append(str(team.pos+1) + col + str(team.name) + col + str(team.won+team.lost) + col + str(team.won) + col + str(team.lost) + col + 
                             str(team.setWon)+'-'+str(team.setLost) + col + r'\textbf{'+str(team.points) +r'} \\')
-    if (key == 'H0' or key == 'D0'):
+    if (key == 'H0'):
         output += lineList[1] + r' \solv ' + lineList[2] + r' \bronse ' 
         for i in range(3,7):
             output += lineList[i]
         output += r' \kvalik ' + lineList[7] + r' \nedrykk ' + lineList[8]
+    elif (key == 'D0'):
+        output += lineList[1] + r' \solv ' + lineList[2] + r' \bronse ' 
+        for i in range(3,7):
+            output += lineList[i]
+        output += r' \kvalik ' + lineList[7] + r' \nedrykk ' + lineList[8] + r' \nedrykk ' + lineList[9]
     elif (key == 'H1'):
         output += lineList[1] + r' \kvalik ' + lineList[2] + r' \kvalik'
         for i in range(3,9):
             output += lineList[i]
-        output += r' \nedrykk' + lineList[9] + r' \nedrykk ' + lineList[10]
+        output += r' \nedrykk' + lineList[9] + r' \nedrykk ' + lineList[10] + r' \nedrykk ' + lineList[11]
     elif (key == 'D1'):
         output += lineList[1] + r' \kvalik ' + lineList[2] + r' \kvalik'
         for i in range(3,8):
             output += lineList[i]
-        output += r' \nedrykk' + lineList[8]
+        output += r' \nedrykk' + lineList[8]+ r' \nedrykk' + lineList[9]
     print(output)
 
 def main():
-    total_matches=[64,64,100,64]
+    total_matches=[56,56,100,64]
     for i in range (4):
         displayTable(league_keys[i],total_matches[i])
 
 if __name__=="__main__": 
+    #generate_matches(H0,8,outpath='../data/matchlistH0.csv')
+    #generate_matches(D0,9,outpath='../data/matchlistD0.csv')
+    #generate_matches(H1,11,outpath='../data/matchlistH1.csv')
+    #generate_matches(D1,9,outpath='../data/matchlistD1.csv')
     main()
-

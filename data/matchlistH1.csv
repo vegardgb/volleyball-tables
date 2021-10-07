@@ -1,101 +1,122 @@
-teamA,teamB,scoreA,scoreB
-OSI 2,Førde 2,1,3
-NTNUI 2,BTSI,3,0
-Askim,Førde 2,3,1
-OSI 2,Sotra,3,2
-Spirit Lørenskog,Førde 2,0,3
-Tromsø 2,Viking 2,1,3
-NTNUI 2,Sotra,3,0
-Askim,Viking 2,3,1
-OSI 2,Askim,1,3
-Spirit Lørenskog,Viking 2,2,3
-OSI 2,Viking 2,0,3
-Sandnes,NTNUI 2,1,3
-BTSI,Tromsø 2,2,3
-TVN,NTNUI 2,3,2
-Viking 2,Tromsø 2,3,0
-TVN,Sandnes,1,3
-Sotra,NTNUI 2,1,3
-BTSI,NTNUI 2,1,3
-Førde 2,Askim,3,2
-Viking 2,NTNUI 2,3,1
-Askim,Spirit Lørenskog,3,1
-Sandnes,Førde 2,0,3
-TVN,Førde 2,1,3
-Viking 2,OSI 2,3,0
-Tromsø 2,Askim,1,3
-Sandnes,Viking 2,0,3
-NTNUI 2,Førde 2,1,3
-Førde 2,NTNUI 2,3,1
-Tromsø 2,OSI 2,3,0
-Førde 2,Tromsø 2
-Viking 2,Sotra
-Sotra,Tromsø 2
-BTSI,Viking 2
-Førde 2,OSI 2
-Sandnes,Askim
-TVN,Askim
-Sotra,OSI 2
-NTNUI 2,Spirit Lørenskog
-Førde 2,Sotra
-Tromsø 2,BTSI
-Sandnes,Spirit Lørenskog
-TVN,Spirit Lørenskog
-Spirit Lørenskog,Tromsø 2
-Askim,Tromsø 2
-Sotra,BTSI
-Viking 2,Sandnes
-OSI 2,Tromsø 2
-BTSI,Sandnes
-Tromsø 2,Sotra
-Spirit Lørenskog,Sandnes
-Viking 2,Førde 2
-BTSI,Førde 2
-Tromsø 2,Sandnes
-NTNUI 2,Askim
-Førde 2,Sandnes
-Sotra,Spirit Lørenskog
-BTSI,Spirit Lørenskog
-OSI 2,BTSI
-Sotra,Førde 2
-Askim,BTSI
-OSI 2,Sandnes
-Spirit Lørenskog,BTSI
-NTNUI 2,Sandnes
-NTNUI 2,OSI 2
-Sotra,Sandnes
-OSI 2,Spirit Lørenskog
-BTSI,Sotra
-BTSI,Askim
-Førde 2,Spirit Lørenskog
-Tromsø 2,NTNUI 2
-Viking 2,Askim
-Sandnes,OSI 2
-Sotra,Askim
-NTNUI 2,Tromsø 2
-Viking 2,Spirit Lørenskog
-TVN,OSI 2
-Tromsø 2,Spirit Lørenskog
-NTNUI 2,Viking 2
-Sandnes,BTSI
-Askim,Sotra
-TVN,BTSI
-Spirit Lørenskog,Sotra
-Tromsø 2,Førde 2
-TVN,Tromsø 2
-Spirit Lørenskog,Askim
-Førde 2,BTSI
-Sandnes,Sotra
-TVN,Sotra
-Askim,OSI 2
-Sandnes,Tromsø 2
-Førde 2,Viking 2
-OSI 2,NTNUI 2
-Askim,NTNUI 2
-Viking 2,BTSI
-Spirit Lørenskog,OSI 2
-Spirit Lørenskog,NTNUI 2
-Askim,Sandnes
-Sotra,Viking 2
-BTSI,OSI 2
-TVN,Viking 2
+,teamA,teamB,scoreA,scoreB
+0,TVN,Askim,0.0,0.0
+1,BTSI,Askim,0.0,0.0
+2,Askim,BTSI,0.0,0.0
+3,TVN,BTSI,0.0,0.0
+4,Førde 2,Askim,0.0,0.0
+5,Askim,Førde 2,0.0,0.0
+6,Førde 2,BTSI,0.0,0.0
+7,BTSI,Førde 2,0.0,0.0
+8,TVN,Førde 2,0.0,0.0
+9,NTNUI 2,Askim,0.0,0.0
+10,Askim,NTNUI 2,0.0,0.0
+11,NTNUI 2,BTSI,0.0,0.0
+12,BTSI,NTNUI 2,0.0,0.0
+13,NTNUI 2,Førde 2,0.0,0.0
+14,Førde 2,NTNUI 2,0.0,0.0
+15,TVN,NTNUI 2,0.0,0.0
+16,OSI 2,Askim,0.0,0.0
+17,Askim,OSI 2,0.0,0.0
+18,OSI 2,BTSI,0.0,0.0
+19,BTSI,OSI 2,0.0,0.0
+20,OSI 2,Førde 2,0.0,0.0
+21,Førde 2,OSI 2,0.0,0.0
+22,OSI 2,NTNUI 2,0.0,0.0
+23,NTNUI 2,OSI 2,0.0,0.0
+24,TVN,OSI 2,0.0,0.0
+25,Sandnes,Askim,0.0,0.0
+26,Askim,Sandnes,0.0,0.0
+27,Sandnes,BTSI,0.0,0.0
+28,BTSI,Sandnes,0.0,0.0
+29,Sandnes,Førde 2,0.0,0.0
+30,Førde 2,Sandnes,0.0,0.0
+31,Sandnes,NTNUI 2,0.0,0.0
+32,NTNUI 2,Sandnes,0.0,0.0
+33,Sandnes,OSI 2,0.0,0.0
+34,OSI 2,Sandnes,0.0,0.0
+35,TVN,Sandnes,0.0,0.0
+36,Sotra,Askim,0.0,0.0
+37,Askim,Sotra,0.0,0.0
+38,Sotra,BTSI,0.0,0.0
+39,BTSI,Sotra,0.0,0.0
+40,Sotra,Førde 2,0.0,0.0
+41,Førde 2,Sotra,0.0,0.0
+42,Sotra,NTNUI 2,0.0,0.0
+43,NTNUI 2,Sotra,0.0,0.0
+44,Sotra,OSI 2,0.0,0.0
+45,OSI 2,Sotra,0.0,0.0
+46,Sotra,Sandnes,0.0,0.0
+47,Sandnes,Sotra,0.0,0.0
+48,TVN,Sotra,0.0,0.0
+49,Spirit Lørenskog,Askim,0.0,0.0
+50,Askim,Spirit Lørenskog,0.0,0.0
+51,Spirit Lørenskog,BTSI,0.0,0.0
+52,BTSI,Spirit Lørenskog,0.0,0.0
+53,Spirit Lørenskog,Førde 2,0.0,0.0
+54,Førde 2,Spirit Lørenskog,0.0,0.0
+55,Spirit Lørenskog,NTNUI 2,0.0,0.0
+56,NTNUI 2,Spirit Lørenskog,0.0,0.0
+57,Spirit Lørenskog,OSI 2,0.0,0.0
+58,OSI 2,Spirit Lørenskog,0.0,0.0
+59,Spirit Lørenskog,Sandnes,0.0,0.0
+60,Sandnes,Spirit Lørenskog,0.0,0.0
+61,Spirit Lørenskog,Sotra,0.0,0.0
+62,Sotra,Spirit Lørenskog,0.0,0.0
+63,TVN,Spirit Lørenskog,0.0,0.0
+64,Torvastad,Askim,0.0,0.0
+65,Askim,Torvastad,0.0,0.0
+66,Torvastad,BTSI,0.0,0.0
+67,BTSI,Torvastad,0.0,0.0
+68,Torvastad,Førde 2,0.0,0.0
+69,Førde 2,Torvastad,0.0,0.0
+70,Torvastad,NTNUI 2,0.0,0.0
+71,NTNUI 2,Torvastad,0.0,0.0
+72,Torvastad,OSI 2,0.0,0.0
+73,OSI 2,Torvastad,0.0,0.0
+74,Torvastad,Sandnes,0.0,0.0
+75,Sandnes,Torvastad,0.0,0.0
+76,Torvastad,Sotra,0.0,0.0
+77,Sotra,Torvastad,0.0,0.0
+78,Torvastad,Spirit Lørenskog,0.0,0.0
+79,Spirit Lørenskog,Torvastad,0.0,0.0
+80,TVN,Torvastad,0.0,0.0
+81,Tromsø 2,Askim,0.0,0.0
+82,Askim,Tromsø 2,0.0,0.0
+83,Tromsø 2,BTSI,0.0,0.0
+84,BTSI,Tromsø 2,0.0,0.0
+85,Tromsø 2,Førde 2,0.0,0.0
+86,Førde 2,Tromsø 2,0.0,0.0
+87,Tromsø 2,NTNUI 2,0.0,0.0
+88,NTNUI 2,Tromsø 2,0.0,0.0
+89,Tromsø 2,OSI 2,0.0,0.0
+90,OSI 2,Tromsø 2,0.0,0.0
+91,Tromsø 2,Sandnes,0.0,0.0
+92,Sandnes,Tromsø 2,0.0,0.0
+93,Tromsø 2,Sotra,0.0,0.0
+94,Sotra,Tromsø 2,0.0,0.0
+95,Tromsø 2,Spirit Lørenskog,0.0,0.0
+96,Spirit Lørenskog,Tromsø 2,0.0,0.0
+97,Tromsø 2,Torvastad,0.0,0.0
+98,Torvastad,Tromsø 2,0.0,0.0
+99,TVN,Tromsø 2,0.0,0.0
+100,Viking 2,Askim,0.0,0.0
+101,Askim,Viking 2,0.0,0.0
+102,Viking 2,BTSI,0.0,0.0
+103,BTSI,Viking 2,0.0,0.0
+104,Viking 2,Førde 2,0.0,0.0
+105,Førde 2,Viking 2,0.0,0.0
+106,Viking 2,NTNUI 2,0.0,0.0
+107,NTNUI 2,Viking 2,0.0,0.0
+108,Viking 2,OSI 2,0.0,0.0
+109,OSI 2,Viking 2,0.0,0.0
+110,Viking 2,Sandnes,0.0,0.0
+111,Sandnes,Viking 2,0.0,0.0
+112,Viking 2,Sotra,0.0,0.0
+113,Sotra,Viking 2,0.0,0.0
+114,Viking 2,Spirit Lørenskog,0.0,0.0
+115,Spirit Lørenskog,Viking 2,0.0,0.0
+116,Viking 2,Torvastad,0.0,0.0
+117,Torvastad,Viking 2,0.0,0.0
+118,Viking 2,Tromsø 2,0.0,0.0
+119,Tromsø 2,Viking 2,0.0,0.0
+120,TVN,Viking 2,0.0,0.0
