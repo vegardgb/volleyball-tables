@@ -23,7 +23,7 @@ class Team(object):
     def __init__(self, name):
         self.name = str(name)
     def __eq__(self, other):
-        return self.points == other.points and self.won == other.won and (self.setWon - self.setLost == other.setWon - other.setLost)
+        return self.points == other.points and self.won == other.won and (self.setWon - self.setLost == other.setWon - other.setLost) and (self.setWon == other.setWon)
 
     def __lt__(self, other):
         if self.points > other.points:
@@ -37,6 +37,10 @@ class Team(object):
         if ((self.setWon - self.setLost) > (other.setWon - other.setLost)):
            return True
         if ((self.setWon - self.setLost) < (other.setWon - other.setLost)):
+            return False
+        if (self.setWon > other.setWon):
+            return True
+        if (self.setWon > other.setWon):
             return False
         return self.points > other.points
 
@@ -165,10 +169,14 @@ def sortTable(table):
         wrongRankTable[i].pos=i
     return wrongRankTable
 
+def saveTableAsCSV(table,filepath):
+    table.to_csv(filepath)
+
 #input table, output latex tabular code
 def displayTable(key,N): 
     table = makeTable(key)
     sortedTable = updateMatches(table,N,key)
+    #saveTableAsCSV(table,key+'.png')
     col = ' & '
     lineList= []
     lineList.append(r'\textbf{Nr}' + col + 'Lag' + col + 'Spelt' + col +'Vunne' + col + 'Tapt' + col + 'Settskilnad' + col + r'\textbf{Poeng} \\ \gull')
@@ -199,7 +207,7 @@ def displayTable(key,N):
     print(output)
 
 def main():
-    total_matches=[56,56,100,64]
+    total_matches=[64,81,121,81]
     for i in range (4):
         displayTable(league_keys[i],total_matches[i])
 
